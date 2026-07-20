@@ -1,16 +1,15 @@
 @font-face {
-  font-family: 'Press Start 2P';
-  src: url('./PressStart2P-Regular.woff') format('woff');
-  font-weight: 400;
+  font-family: 'Inter';
   font-style: normal;
+  font-weight: 400 785;
   font-display: swap;
+  src: url("../fonts/inter.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('./Inter-Variable.woff2') format('woff2 supports variations'),
-       url('./Inter-Variable.woff2') format('woff2-variations');
-  font-weight: 410 715;
+  font-family: 'Press Start 2P';
   font-style: normal;
+  font-weight: 400;
   font-display: swap;
+  src: url("../fonts/press-start-2p.woff2") format("woff2");
 }

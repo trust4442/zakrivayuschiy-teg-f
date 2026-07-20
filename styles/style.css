@@ -1,5 +1,5 @@
 .page {
-  margin: 0; 
+  margin: 0;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font-modern);
@@ -7,10 +7,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px 0 50px; 
-  
-  background-image: 
-    repeating-linear-gradient(to right, var(--bg-gradient-light) 0, var(--bg-gradient-light) 2px, transparent 2px, transparent 4px),
+  padding: 100px 0 50px;
+  background-image: repeating-linear-gradient(to right, var(--bg-gradient-light) 0, var(--bg-gradient-light) 2px, transparent 2px, transparent 4px),
     repeating-linear-gradient(to bottom, var(--bg-gradient-light) 0, var(--bg-gradient-light) 2px, transparent 2px, transparent 4px),
     linear-gradient(to bottom, var(--bg-gradient-fade-start) 0.01%, var(--bg-gradient-fade-end) 100%);
   background-size: cover;
@@ -19,8 +17,8 @@
 
 .header {
   box-sizing: border-box;
-  width: 100%; 
-  max-width: 700px; 
+  width: 100%;
+  max-width: 700px;
   height: clamp(327px, calc(312.5px + 3.85vw), 368px);
   background-color: var(--color-background);
   border: var(--border-width) solid var(--color-main);
@@ -28,11 +26,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .header__logo {
-  margin: 0; 
+  margin: 0;
   font-family: var(--font-retro);
   font-size: clamp(49px, calc(43.4px + 1.5vw), 65px);
   line-height: 100%;
@@ -67,7 +65,7 @@ main {
 }
 
 .post-card__header {
-  margin: 0; 
+  margin: 0;
   padding: 4px 10px;
   font-family: var(--font-modern);
   font-size: 18px;
@@ -118,7 +116,7 @@ main {
 }
 
 .text-modern {
-  margin: 0; 
+  margin: 0;
   font-family: var(--font-modern);
   font-size: 18px;
   line-height: 21px;
@@ -130,7 +128,7 @@ main {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 12px; 
+  gap: 12px;
   padding: 0 25px 25px;
 }
 
@@ -200,7 +198,6 @@ main {
   text-align: center;
 }
 
-/* Настройки для векторной дискеты в кнопке */
 .save-btn .floppy-icon {
   width: 28px;
   height: 28px;
@@ -241,12 +238,12 @@ main {
 
 dialog {
   margin: auto;
-  width: 353px; 
+  width: 353px;
   height: 191px;
   padding: 30px;
   background-color: var(--color-background);
   border: var(--border-width) solid var(--color-main);
-  box-sizing: border-box; 
+  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -258,7 +255,7 @@ dialog form {
 dialog[open] {
   display: flex;
   flex-direction: column;
-  gap: 30px; 
+  gap: 30px;
 }
 
 dialog::backdrop {
@@ -273,7 +270,6 @@ dialog::backdrop {
   width: 100%;
 }
 
-/* Настройки для векторной дискеты в модальном окне */
 .dialog__content .floppy-icon {
   width: 39px;
   height: 39px;
@@ -282,7 +278,7 @@ dialog::backdrop {
 }
 
 .dialog__content .text-modern {
-  width: 234px; 
+  width: 234px;
   font-family: var(--font-retro);
   font-size: 14px;
   line-height: 150%;
@@ -300,16 +296,38 @@ dialog::backdrop {
   text-transform: uppercase;
 }
 
-.filter-grayscale { filter: grayscale(100%); }
-.filter-sepia { filter: sepia(100%); }
-.filter-invert { filter: invert(80%); }
-.filter-blur { filter: blur(2px); }
-.filter-hue { filter: hue-rotate(90deg); }
-.filter-contrast { filter: contrast(200%); }
-.filter-saturate { filter: saturate(300%); }
-.filter-multiple { filter: sepia(50%) hue-rotate(180deg) blur(1px); }
+.filter-grayscale {
+  filter: grayscale(100%);
+}
 
-/* Адаптив с точным разрешением */
+.filter-sepia {
+  filter: sepia(100%);
+}
+
+.filter-invert {
+  filter: invert(80%);
+}
+
+.filter-blur {
+  filter: blur(2px);
+}
+
+.filter-hue {
+  filter: hue-rotate(90deg);
+}
+
+.filter-contrast {
+  filter: contrast(200%);
+}
+
+.filter-saturate {
+  filter: saturate(300%);
+}
+
+.filter-multiple {
+  filter: sepia(50%) hue-rotate(180deg) blur(1px);
+}
+
 @media (max-width: 375px) and (max-height: 668px) {
   .post-card__content {
     margin-left: 10px;

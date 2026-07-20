@@ -1,14 +1,12 @@
-/* Базовые параметры центрирования для SVG */
 .like-icon {
   transform-origin: center;
 }
 
 .like-icon .heart {
   transform-origin: center;
-  transform-box: fill-box; /* Обязательное свойство, чтобы сердце не "улетало" при масштабировании */
+  transform-box: fill-box;
 }
 
-/* Базовые состояния путей */
 .like-icon .contour {
   fill: var(--color-main);
   transition: fill 0.1s linear 0s;
@@ -29,7 +27,6 @@
   fill: var(--color-accent-red);
 }
 
-/* Hover-состояние */
 @media (hover: hover) {
   .like-icon:hover .core {
     fill: var(--color-main);
@@ -42,7 +39,6 @@
   }
 }
 
-/* Состояние нажатия */
 .like-icon:active .core {
   fill: var(--color-accent-red);
   transition: fill 0.3s linear 0s;
@@ -53,7 +49,6 @@
   transition: fill 0.3s linear 0.05s;
 }
 
-/* Состояние лайка (клик) */
 .like-icon.is-liked .core {
   fill: var(--color-accent-red);
   transition: fill 0.3s linear 0s;
@@ -86,22 +81,23 @@
   }
 }
 
-/* Анимации клика (изменены на 0-50-100 для корректного плавного возврата) */
 @keyframes scaleHeart {
-  0%, 100% { 
-    transform: scale(1); 
+  0%,
+  100% {
+    transform: scale(1);
   }
-  50% { 
-    transform: scale(1.25); 
+  50% {
+    transform: scale(1.25);
   }
 }
 
 @keyframes sparksFlash {
-  0%, 100% { 
-    opacity: 0; 
+  0%,
+  100% {
+    opacity: 0;
   }
-  50% { 
-    opacity: 1; 
+  50% {
+    opacity: 1;
   }
 }
 
