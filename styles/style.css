@@ -1,16 +1,317 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
-
 .page {
+  margin: 0; 
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font-modern);
+  font-variation-settings: 'wght' var(--font-modern-weight-regular);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0 50px; 
+  
+  background-image: 
+    repeating-linear-gradient(to right, var(--bg-gradient-light) 0, var(--bg-gradient-light) 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(to bottom, var(--bg-gradient-light) 0, var(--bg-gradient-light) 2px, transparent 2px, transparent 4px),
+    linear-gradient(to bottom, var(--bg-gradient-fade-start) 0.01%, var(--bg-gradient-fade-end) 100%);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  box-sizing: border-box;
+  width: 100%; 
+  max-width: 700px; 
+  height: clamp(327px, calc(312.5px + 3.85vw), 368px);
+  background-color: var(--color-background);
+  border: var(--border-width) solid var(--color-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; 
+}
+
+.header__logo {
+  margin: 0; 
+  font-family: var(--font-retro);
+  font-size: clamp(49px, calc(43.4px + 1.5vw), 65px);
+  line-height: 100%;
+}
+
+.header__title {
+  margin: 0;
+  font-family: var(--font-retro);
+  font-size: clamp(14px, calc(10.8px + 0.85vw), 23px);
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.post-card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 700px;
+  background-color: var(--color-background);
+  border: var(--border-width) solid var(--color-main);
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card__header {
+  margin: 0; 
+  padding: 4px 10px;
+  font-family: var(--font-modern);
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: var(--font-modern-weight-bold);
+  font-variation-settings: 'wght' var(--font-modern-weight-bold);
+  border-bottom: var(--border-width) solid var(--color-main);
+  box-sizing: border-box;
+}
+
+.post-card__image-container {
+  position: relative;
+  width: 100%;
+}
+
+.post-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-bottom: var(--border-width) solid var(--color-main);
+}
+
+.post-card__label {
+  position: absolute;
+  top: clamp(15px, 6.6vw, 25px);
+  right: clamp(15px, 6.6vw, 25px);
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  font-family: var(--font-retro);
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--color-background);
+  -webkit-text-stroke: 1px var(--color-main);
+}
+
+@supports not (-webkit-text-stroke: 1px var(--color-main)) {
+  .post-card__label {
+    text-shadow: 1px 1px 0 var(--color-main), -1px -1px 0 var(--color-main), 1px -1px 0 var(--color-main), -1px 1px 0 var(--color-main);
+  }
+}
+
+.post-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+}
+
+.text-modern {
+  margin: 0; 
+  font-family: var(--font-modern);
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: var(--font-modern-weight-regular);
+  font-variation-settings: 'wght' var(--font-modern-weight-regular);
+}
+
+.post-card__footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px; 
+  padding: 0 25px 25px;
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border-width) solid var(--color-main);
+  background-color: var(--color-background);
+  font-family: var(--font-retro);
+  cursor: pointer;
+  overflow: hidden;
+  isolation: isolate;
+  transition: box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-main);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+@media (hover: hover) {
+  .button:hover::before {
+    transform: translateX(0);
+  }
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  color: var(--color-background);
+  mix-blend-mode: difference;
+  white-space: nowrap;
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--color-accent-red);
+}
+
+.save-btn {
+  flex-direction: column;
+  gap: 8px;
+  padding: 15px 20px;
+  width: 306px;
+  height: 84px;
+}
+
+@media (min-width: 768px) {
+  .save-btn {
+    flex-direction: row;
+    width: 335px;
+    height: 55px;
+  }
+}
+
+.save-btn .button__text {
+  font-size: 14px;
+  line-height: 90%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Настройки для векторной дискеты в кнопке */
+.save-btn .floppy-icon {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: var(--color-background);
+}
+
+.card__icon-button {
+  background: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  width: 39px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease;
+}
+
+.card__icon-button:focus-visible {
+  outline: none;
+  border-color: var(--color-accent-red);
+}
+
+.card__like-button {
+  width: 130px;
+  height: 38px;
+  padding: 9px 17px;
+}
+
+.card__like-button .button__text {
+  font-size: 14px;
+  line-height: 90%;
+}
+
+dialog {
+  margin: auto;
+  width: 353px; 
+  height: 191px;
+  padding: 30px;
+  background-color: var(--color-background);
+  border: var(--border-width) solid var(--color-main);
+  box-sizing: border-box; 
+  overflow: hidden;
+}
+
+dialog form {
+  margin: 0;
+  width: 100%;
+}
+
+dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+}
+
+dialog::backdrop {
+  background-color: var(--color-overlay);
+}
+
+.dialog__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Настройки для векторной дискеты в модальном окне */
+.dialog__content .floppy-icon {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  color: var(--color-main);
+}
+
+.dialog__content .text-modern {
+  width: 234px; 
+  font-family: var(--font-retro);
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.dialog__button {
+  width: 100%;
+  height: 38px;
+  padding: 9px 17px;
+}
+
+.dialog__button .button__text {
+  text-transform: uppercase;
+}
+
+.filter-grayscale { filter: grayscale(100%); }
+.filter-sepia { filter: sepia(100%); }
+.filter-invert { filter: invert(80%); }
+.filter-blur { filter: blur(2px); }
+.filter-hue { filter: hue-rotate(90deg); }
+.filter-contrast { filter: contrast(200%); }
+.filter-saturate { filter: saturate(300%); }
+.filter-multiple { filter: sepia(50%) hue-rotate(180deg) blur(1px); }
+
+/* Адаптив с точным разрешением */
+@media (max-width: 375px) and (max-height: 668px) {
+  .post-card__content {
+    margin-left: 10px;
+  }
 }

@@ -1,18 +1,337 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Закрывающий тег</title>
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
-  </head>
-  <body class="page">
-    <header class="header"></header>
-    <main></main>
-    <script src="./scripts/like.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Закрывающий тег</title>
+  <link rel="icon" href="./images/favicon.ico" sizes="any">
+  <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+  <link rel="stylesheet" href="./fonts/fonts.css">
+  <link rel="stylesheet" href="./styles/variables.css">
+  <link rel="stylesheet" href="./styles/globals.css">
+  <link rel="stylesheet" href="./styles/animations.css">
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body class="page">
+  
+  <svg style="display: none;" aria-hidden="true">
+    <symbol id="floppy" viewBox="0 0 28 28">
+      <rect width="2.15385" height="2.15385" fill="currentColor"/>
+      <rect y="2.1543" width="2.15385" height="2.15385" fill="currentColor"/>
+      <rect y="4.30762" width="2.15385" height="2.15385" fill="currentColor"/>
+      <rect y="6.46191" width="2.15385" height="2.15385" fill="currentColor"/>
+      <rect y="8.61523" width="2.15385" height="2.15385" fill="currentColor"/>
+      <rect y="10.7695" width="2.15385" height="2.15385" fill="currentColor"/>
+      <rect y="12.9229" width="2.15385" height="2.15385" fill="currentColor"/>
+      <rect y="15.0771" width="2.15385" height="2.15385" fill="currentColor"/>
+      <rect y="17.2305" width="2.15385" height="2.15385" fill="currentColor"/>
+      <rect y="19.3848" width="2.15385" height="2.15385" fill="currentColor"/>
+      <rect y="21.5381" width="2.15385" height="2.15385" fill="currentColor"/>
+      <rect y="23.6924" width="2.15385" height="2.15385" fill="currentColor"/>
+      <rect y="25.8457" width="2.15385" height="2.15385" fill="currentColor"/>
+      <rect x="23.6927" width="2.15385" height="2.15385" transform="rotate(90 23.6927 0)" fill="currentColor"/>
+      <rect x="21.5391" width="2.15385" height="2.15385" transform="rotate(90 21.5391 0)" fill="currentColor"/>
+      <rect x="19.3841" width="2.15385" height="2.15385" transform="rotate(90 19.3841 0)" fill="currentColor"/>
+      <rect x="17.2305" width="2.15385" height="2.15385" transform="rotate(90 17.2305 0)" fill="currentColor"/>
+      <rect x="15.0768" width="2.15385" height="2.15385" transform="rotate(90 15.0768 0)" fill="currentColor"/>
+      <rect x="12.9232" width="2.15385" height="2.15385" transform="rotate(90 12.9232 0)" fill="currentColor"/>
+      <rect x="10.7695" width="2.15385" height="2.15385" transform="rotate(90 10.7695 0)" fill="currentColor"/>
+      <rect x="8.61589" width="2.15385" height="2.15385" transform="rotate(90 8.61589 0)" fill="currentColor"/>
+      <rect x="6.46094" width="2.15385" height="2.15385" transform="rotate(90 6.46094 0)" fill="currentColor"/>
+      <rect x="4.3073" width="2.15385" height="2.15385" transform="rotate(90 4.3073 0)" fill="currentColor"/>
+      <rect x="25.8464" y="2.1543" width="2.15385" height="2.15385" transform="rotate(90 25.8464 2.1543)" fill="currentColor"/>
+      <rect x="6.46094" y="4.30762" width="2.15385" height="2.15385" transform="rotate(90 6.46094 4.30762)" fill="currentColor"/>
+      <rect x="6.46094" y="2.1543" width="2.15385" height="2.15385" transform="rotate(90 6.46094 2.1543)" fill="currentColor"/>
+      <rect x="6.46094" y="6.46191" width="2.15385" height="2.15385" transform="rotate(90 6.46094 6.46191)" fill="currentColor"/>
+      <rect x="21.5391" y="4.30762" width="2.15385" height="2.15385" transform="rotate(90 21.5391 4.30762)" fill="currentColor"/>
+      <rect x="21.5391" y="2.1543" width="2.15385" height="2.15385" transform="rotate(90 21.5391 2.1543)" fill="currentColor"/>
+      <rect x="21.5391" y="6.46191" width="2.15385" height="2.15385" transform="rotate(90 21.5391 6.46191)" fill="currentColor"/>
+      <rect x="17.2305" y="4.30762" width="2.15385" height="2.15385" transform="rotate(90 17.2305 4.30762)" fill="currentColor"/>
+      <rect x="17.2305" y="2.1543" width="2.15385" height="2.15385" transform="rotate(90 17.2305 2.1543)" fill="currentColor"/>
+      <rect x="17.2305" y="6.46191" width="2.15385" height="2.15385" transform="rotate(90 17.2305 6.46191)" fill="currentColor"/>
+      <rect x="21.5391" y="8.61523" width="2.15385" height="2.15385" transform="rotate(90 21.5391 8.61523)" fill="currentColor"/>
+      <rect x="19.3841" y="8.61523" width="2.15385" height="2.15385" transform="rotate(90 19.3841 8.61523)" fill="currentColor"/>
+      <rect x="17.2305" y="8.61523" width="2.15385" height="2.15385" transform="rotate(90 17.2305 8.61523)" fill="currentColor"/>
+      <rect x="15.0768" y="8.61523" width="2.15385" height="2.15385" transform="rotate(90 15.0768 8.61523)" fill="currentColor"/>
+      <rect x="12.9232" y="8.61523" width="2.15385" height="2.15385" transform="rotate(90 12.9232 8.61523)" fill="currentColor"/>
+      <rect x="10.7695" y="8.61523" width="2.15385" height="2.15385" transform="rotate(90 10.7695 8.61523)" fill="currentColor"/>
+      <rect x="8.61589" y="8.61523" width="2.15385" height="2.15385" transform="rotate(90 8.61589 8.61523)" fill="currentColor"/>
+      <rect x="6.46094" y="8.61523" width="2.15385" height="2.15385" transform="rotate(90 6.46094 8.61523)" fill="currentColor"/>
+      <rect x="23.6927" y="15.0771" width="2.15385" height="2.15385" transform="rotate(90 23.6927 15.0771)" fill="currentColor"/>
+      <rect x="21.5391" y="15.0771" width="2.15385" height="2.15385" transform="rotate(90 21.5391 15.0771)" fill="currentColor"/>
+      <rect x="19.3841" y="15.0771" width="2.15385" height="2.15385" transform="rotate(90 19.3841 15.0771)" fill="currentColor"/>
+      <rect x="17.2305" y="15.0771" width="2.15385" height="2.15385" transform="rotate(90 17.2305 15.0771)" fill="currentColor"/>
+      <rect x="15.0768" y="15.0771" width="2.15385" height="2.15385" transform="rotate(90 15.0768 15.0771)" fill="currentColor"/>
+      <rect x="12.9232" y="15.0771" width="2.15385" height="2.15385" transform="rotate(90 12.9232 15.0771)" fill="currentColor"/>
+      <rect x="10.7695" y="15.0771" width="2.15385" height="2.15385" transform="rotate(90 10.7695 15.0771)" fill="currentColor"/>
+      <rect x="8.61589" y="15.0771" width="2.15385" height="2.15385" transform="rotate(90 8.61589 15.0771)" fill="currentColor"/>
+      <rect x="6.46094" y="15.0771" width="2.15385" height="2.15385" transform="rotate(90 6.46094 15.0771)" fill="currentColor"/>
+      <rect x="23.6927" y="17.2305" width="2.15385" height="2.15385" transform="rotate(90 23.6927 17.2305)" fill="currentColor"/>
+      <rect x="6.46094" y="17.2305" width="2.15385" height="2.15385" transform="rotate(90 6.46094 17.2305)" fill="currentColor"/>
+      <rect x="23.6927" y="19.3848" width="2.15385" height="2.15385" transform="rotate(90 23.6927 19.3848)" fill="currentColor"/>
+      <rect x="6.46094" y="19.3848" width="2.15385" height="2.15385" transform="rotate(90 6.46094 19.3848)" fill="currentColor"/>
+      <rect x="23.6927" y="21.5381" width="2.15385" height="2.15385" transform="rotate(90 23.6927 21.5381)" fill="currentColor"/>
+      <rect x="6.46094" y="21.5381" width="2.15385" height="2.15385" transform="rotate(90 6.46094 21.5381)" fill="currentColor"/>
+      <rect x="6.46094" y="23.6924" width="2.15385" height="2.15385" transform="rotate(90 6.46094 23.6924)" fill="currentColor"/>
+      <rect x="23.6927" y="23.6924" width="2.15385" height="2.15385" transform="rotate(90 23.6927 23.6924)" fill="currentColor"/>
+      <rect x="25.8464" y="25.8457" width="2.15385" height="2.15385" transform="rotate(90 25.8464 25.8457)" fill="currentColor"/>
+      <rect x="23.6927" y="25.8457" width="2.15385" height="2.15385" transform="rotate(90 23.6927 25.8457)" fill="currentColor"/>
+      <rect x="21.5391" y="25.8457" width="2.15385" height="2.15385" transform="rotate(90 21.5391 25.8457)" fill="currentColor"/>
+      <rect x="19.3841" y="25.8457" width="2.15385" height="2.15385" transform="rotate(90 19.3841 25.8457)" fill="currentColor"/>
+      <rect x="17.2305" y="25.8457" width="2.15385" height="2.15385" transform="rotate(90 17.2305 25.8457)" fill="currentColor"/>
+      <rect x="15.0768" y="25.8457" width="2.15385" height="2.15385" transform="rotate(90 15.0768 25.8457)" fill="currentColor"/>
+      <rect x="12.9232" y="25.8457" width="2.15385" height="2.15385" transform="rotate(90 12.9232 25.8457)" fill="currentColor"/>
+      <rect x="10.7695" y="25.8457" width="2.15385" height="2.15385" transform="rotate(90 10.7695 25.8457)" fill="currentColor"/>
+      <rect x="8.61589" y="25.8457" width="2.15385" height="2.15385" transform="rotate(90 8.61589 25.8457)" fill="currentColor"/>
+      <rect x="6.46094" y="25.8457" width="2.15385" height="2.15385" transform="rotate(90 6.46094 25.8457)" fill="currentColor"/>
+      <rect x="4.3073" y="25.8457" width="2.15385" height="2.15385" transform="rotate(90 4.3073 25.8457)" fill="currentColor"/>
+      <rect x="28" y="28" width="2.15385" height="2.15385" transform="rotate(-180 28 28)" fill="currentColor"/>
+      <rect x="28" y="25.8457" width="2.15385" height="2.15385" transform="rotate(-180 28 25.8457)" fill="currentColor"/>
+      <rect x="28" y="23.6924" width="2.15385" height="2.15385" transform="rotate(-180 28 23.6924)" fill="currentColor"/>
+      <rect x="28" y="21.5381" width="2.15385" height="2.15385" transform="rotate(-180 28 21.5381)" fill="currentColor"/>
+      <rect x="28" y="19.3848" width="2.15385" height="2.15385" transform="rotate(-180 28 19.3848)" fill="currentColor"/>
+      <rect x="28" y="17.2305" width="2.15385" height="2.15385" transform="rotate(-180 28 17.2305)" fill="currentColor"/>
+      <rect x="28" y="15.0771" width="2.15385" height="2.15385" transform="rotate(-180 28 15.0771)" fill="currentColor"/>
+      <rect x="28" y="12.9229" width="2.15385" height="2.15385" transform="rotate(-180 28 12.9229)" fill="currentColor"/>
+      <rect x="28" y="10.7695" width="2.15385" height="2.15385" transform="rotate(-180 28 10.7695)" fill="currentColor"/>
+      <rect x="28" y="8.61523" width="2.15385" height="2.15385" transform="rotate(-180 28 8.61523)" fill="currentColor"/>
+      <rect x="28" y="6.46191" width="2.15385" height="2.15385" transform="rotate(-180 28 6.46191)" fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <header class="header">
+    <h1 class="header__logo">&lt;/HTML&gt;</h1>
+    <p class="header__title">закрывающий тег</p>
+  </header>
+
+  <main>
+    <!-- Карточка 1 -->
+    <article class="post-card">
+      <h2 class="post-card__header">Фритрек и нулевой спринт: Подготовка к работе</h2>
+      <div class="post-card__image-container">
+        <img src="./images/image1.png" alt="Ночной фургончик" class="post-card__image filter-grayscale">
+        <span class="post-card__label">ВЫБОР</span>
+      </div>
+      <div class="post-card__content">
+        <p class="text-modern">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
+        <p class="text-modern">Первые шаги давались непросто: код казался запутанным набором символов, а каждая ошибка вызывала растерянность. Но именно в тот момент я осознал, что создание чего-то работающего своими руками — это то, чему я хочу посвятить себя в будущем.</p>
+      </div>
+      <div class="post-card__footer">
+        <button class="card__icon-button" aria-label="Лайкнуть">
+          <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="heart">
+              <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"/>
+              <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"/>
+              <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"/>
+            </g>
+            <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"/>
+          </svg>
+        </button>
+        <button class="button card__like-button"><span class="button__text">Like</span></button>
+      </div>
+    </article>
+
+    <!-- Карточка 2 -->
+    <article class="post-card">
+      <h2 class="post-card__header">1 спринт: Я — чистый лист</h2>
+      <div class="post-card__image-container">
+        <img src="./images/image2.png" alt="Фургончик" class="post-card__image filter-sepia">
+        <span class="post-card__label">СТАРТ</span>
+      </div>
+      <div class="post-card__content">
+        <p class="text-modern">На первых этапах мы работали со страхами и сомнениями, которые часто испытывают новички. Один из них — страх перед чистым листом. Это, конечно же, намного сложнее, чем боязнь куска бумаги. Часто за этим ощущением скрываются более глубокие вопросы: а что, если вдруг не выйдет?</p>
+        <p class="text-modern">Помню, как открывал пустой редактор кода и долго смотрел в монитор, боясь вписать первый символ. Однако после написания пары строчек кода, страх постепенно сменялся азартом: каждый новый тег делал мою идею чуть более реальной.</p>
+      </div>
+      <div class="post-card__footer">
+        <button class="card__icon-button" aria-label="Лайкнуть">
+          <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="heart">
+              <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"/>
+              <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"/>
+              <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"/>
+            </g>
+            <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"/>
+          </svg>
+        </button>
+        <button class="button card__like-button"><span class="button__text">Like</span></button>
+      </div>
+    </article>
+
+    <!-- Карточка 3 -->
+    <article class="post-card">
+      <h2 class="post-card__header">1 спринт: А если не получится?</h2>
+      <div class="post-card__image-container">
+        <img src="./images/image3.png" alt="Фургончик" class="post-card__image filter-invert">
+        <span class="post-card__label">СОМНЕНИЯ</span>
+      </div>
+      <div class="post-card__content">
+        <p class="text-modern">Первый проект позади. Но это всё ещё самое начало пути. Радость могла смениться ожиданием провала. Или вы, наоборот, могли вдохновиться успехами и поверить в себя.</p>
+        <p class="text-modern">После первого успешно сданного проекта я поймал мощный прилив уверенности, который помог заглушить мысли о возможных неудачах. Я понял, что даже если впереди ждут сложные задачи, умение искать решение и упорство значат гораздо больше, чем изначальный опыт.</p>
+      </div>
+      <div class="post-card__footer">
+        <button class="card__icon-button" aria-label="Лайкнуть">
+          <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="heart">
+              <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"/>
+              <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"/>
+              <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"/>
+            </g>
+            <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"/>
+          </svg>
+        </button>
+        <button class="button card__like-button"><span class="button__text">Like</span></button>
+      </div>
+    </article>
+
+    <!-- Карточка 4 -->
+    <article class="post-card">
+      <h2 class="post-card__header">2 спринт: Погоня за идеалом</h2>
+      <div class="post-card__image-container">
+        <img src="./images/image4.png" alt="Фургончик" class="post-card__image filter-blur">
+        <span class="post-card__label">ПЕРФЕКЦИОНИЗМ</span>
+      </div>
+      <div class="post-card__content">
+        <p class="text-modern">На этом этапе мы достаточно разбирались в основах вёрстки, чтобы понять, как много ещё впереди. Вы могли попытаться погнаться за идеалом и понять, что он недостижим. А, может, вы вовсе не подвержены перфекционизму и вместо того, чтобы сделать идеально, старались просто сделать.</p>
+        <p class="text-modern">Сначала мне казалось, что достаточно просто выучить правила, чтобы все заработало как часы. Но когда верстка «плыла» на разных экранах, я осознал, что гибкость важнее жестких рамок, а умение договариваться с кодом приходит только через постоянную практику.</p>
+      </div>
+      <div class="post-card__footer">
+        <button class="card__icon-button" aria-label="Лайкнуть">
+          <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="heart">
+              <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"/>
+              <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"/>
+              <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"/>
+            </g>
+            <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"/>
+          </svg>
+        </button>
+        <button class="button card__like-button"><span class="button__text">Like</span></button>
+      </div>
+    </article>
+
+    <!-- Карточка 5 -->
+    <article class="post-card">
+      <h2 class="post-card__header">2 спринт: О тех, кто рядом</h2>
+      <div class="post-card__image-container">
+        <img src="./images/image5.png" alt="Фургончик" class="post-card__image filter-hue">
+        <span class="post-card__label">КОМАНДА</span>
+      </div>
+      <div class="post-card__content">
+        <p class="text-modern">Всё это время вы были не одиноки (хотя, возможно, иногда и чувствовали, что одни против целого мира). Вас окружали одногруппники, команда сопровождения и просто близкие люди, которым можно пожаловаться, если очередной макет просто не поддавался. Осваивать что-то новое легче, когда рядом есть единомышленники.</p>
+        <p class="text-modern">Порой я слишком часто жаловался друзьям на кажущиеся невыполнимыми задачи, но именно эти разговоры помогали взглянуть на проблему под другим углом. Их поддержка превращала бесконечные часы борьбы с кодом в понятный процесс, и благодаря нашему общению всё давалось значительно легче.</p>
+      </div>
+      <div class="post-card__footer">
+        <button class="card__icon-button" aria-label="Лайкнуть">
+          <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="heart">
+              <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"/>
+              <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"/>
+              <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"/>
+            </g>
+            <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"/>
+          </svg>
+        </button>
+        <button class="button card__like-button"><span class="button__text">Like</span></button>
+      </div>
+    </article>
+
+    <!-- Карточка 6 -->
+    <article class="post-card">
+      <h2 class="post-card__header">3 спринт: Обходные стратегии</h2>
+      <div class="post-card__image-container">
+        <img src="./images/image6.png" alt="Фургончик" class="post-card__image filter-contrast">
+        <span class="post-card__label">ПЕРЕЗАГРУЗКА</span>
+      </div>
+      <div class="post-card__content">
+        <p class="text-modern">На этом курсе вы постоянно решали разные задачи. В какой-то момент вам могло показаться, что решения просто иссякли. Значит, пришло время посмотреть на задачу под другим углом.</p>
+        <p class="text-modern">Когда код переставал слушаться, а в голове наступал полный тупик, лучшим спасением становилась пауза: я отвлекался на пару партий в любимую мобильную головоломку или просто отходил от компьютера. Этот короткий отдых помогал освежить мысли, и стоило вернуться к экрану, как решение часто находилось само собой.</p>
+      </div>
+      <div class="post-card__footer">
+        <button class="card__icon-button" aria-label="Лайкнуть">
+          <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="heart">
+              <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"/>
+              <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"/>
+              <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"/>
+            </g>
+            <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"/>
+          </svg>
+        </button>
+        <button class="button card__like-button"><span class="button__text">Like</span></button>
+      </div>
+    </article>
+
+    <!-- Карточка 7 -->
+    <article class="post-card">
+      <h2 class="post-card__header">3 спринт: Когда опускаются руки</h2>
+      <div class="post-card__image-container">
+        <img src="./images/image7.png" alt="Фургончик" class="post-card__image filter-saturate">
+        <span class="post-card__label">БАЛАНС</span>
+      </div>
+      <div class="post-card__content">
+        <p class="text-modern">Во время учебы часто возникает чувство, что хочется сдаться. Вроде и проектную пора сдавать, и задачи хочется порешать, и в теории получше разобраться, и жизнь не забыть пожить. В такие моменты очень нужна концентрация. Вспомните, откуда вы её черпали.</p>
+        <p class="text-modern">В моменты, когда учеба и бесконечная отладка кода выматывали до предела, зал становился моим главным спасением. Там я отключал голову, переключая всё внимание на физические упражнения: тело работало на пределе, пока разум наконец-то отдыхал от сложных размышлений. Такая перезагрузка давала необходимый контраст, и после тренировки возвращаться к изучению программирования становилось гораздо проще и приятнее</p>
+      </div>
+      <div class="post-card__footer">
+        <button class="card__icon-button" aria-label="Лайкнуть">
+          <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="heart">
+              <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"/>
+              <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"/>
+              <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"/>
+            </g>
+            <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"/>
+          </svg>
+        </button>
+        <button class="button card__like-button"><span class="button__text">Like</span></button>
+      </div>
+    </article>
+
+    <!-- Карточка 8 -->
+    <article class="post-card">
+      <h2 class="post-card__header">«Сейчас и здесь»</h2>
+      <div class="post-card__image-container">
+        <img src="./images/image8.png" alt="Фургончик" class="post-card__image filter-multiple">
+        <span class="post-card__label">УВЕРЕННОСТЬ</span>
+      </div>
+      <div class="post-card__content">
+        <p class="text-modern">Сейчас вы уже очень много знаете о вёрстке. Но это только начало. Во-первых, впереди ещё много материала про «красотищу». Во-вторых, с окончанием курса учёба не заканчивается. Вёрстка — это целый мир. И этот мир постоянно меняется. Познать его полностью не получится, но это тот случай, когда важен сам процесс познания. Ведь часто путь — и есть результат.</p>
+        <p class="text-modern">Оглядываясь назад на весь проделанный путь от первых ошибок до уверенной работы с кодом, я испытываю огромную гордость за то, сколько всего удалось освоить. Теперь я с нетерпением жду будущих проектов, осознавая, что впереди еще бесконечное множество возможностей для роста и профессионального развития.</p>
+      </div>
+      <div class="post-card__footer">
+        <button class="card__icon-button" aria-label="Лайкнуть">
+          <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="heart">
+              <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"/>
+              <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"/>
+              <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"/>
+            </g>
+            <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"/>
+          </svg>
+        </button>
+        <button class="button card__like-button"><span class="button__text">Like</span></button>
+      </div>
+    </article>
+  </main>
+
+  <button class="button save-btn" onclick="document.getElementById('memory-dialog').showModal()">
+    <svg class="floppy-icon" aria-hidden="true"><use href="#floppy"></use></svg>
+    <span class="button__text">Сохранить на память</span>
+  </button>
+
+  <dialog id="memory-dialog">
+    <div class="dialog__content">
+      <svg class="floppy-icon" aria-hidden="true"><use href="#floppy"></use></svg>
+      <p class="text-modern">Вставьте дискету, чтобы продолжить</p>
+    </div>
+    <form method="dialog">
+      <button class="button dialog__button">
+        <span class="button__text">ОК</span>
+      </button>
+    </form>
+  </dialog>
+
+  <script src="./scripts/like.js"></script>
+</body>
 </html>

@@ -1,1 +1,23 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  /* Цвета */
+  --color-background: #ffffff;
+  --color-main: #000000;
+  --color-accent-red: #ff0000;
+  --color-overlay: rgba(0, 0, 0, 0.5);
+
+  /* Цвета для фона-сетки */
+  --bg-gradient-light: #d3d3d3;
+  --bg-gradient-fade-start: #e7e7e7;
+  --bg-gradient-fade-end: #1a1a1a;
+
+  /* Шрифты */
+  --font-retro: 'Press Start 2P', cursive;
+  --font-modern: 'Inter', sans-serif;
+
+  /* Вес шрифта Inter */
+  --font-modern-weight-regular: 410;
+  --font-modern-weight-bold: 715;
+
+  /* Общие параметры */
+  --border-width: 2px;
+}
