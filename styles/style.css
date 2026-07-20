@@ -172,7 +172,7 @@ main {
 
 .button:focus-visible {
   outline: none;
-  box-shadow: 2px 2px 0 var(--color-accent-red);
+  box-shadow: 2px 2px 0 var(--color-main);
 }
 
 .save-btn {
@@ -222,7 +222,7 @@ main {
 
 .card__icon-button:focus-visible {
   outline: none;
-  border-color: var(--color-accent-red);
+  border-color: var(--color-main);
 }
 
 .card__like-button {
