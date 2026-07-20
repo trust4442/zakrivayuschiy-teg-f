@@ -3,11 +3,12 @@
   font-style: normal;
   font-weight: 400 785;
   font-display: swap;
-  src: url("../fonts/inter.woff2") format("woff2");
+  src: url("../fonts/inter.woff2") format("woff2 supports variations"),
+       url("../fonts/inter.woff2") format("woff2-variations");
 }
 
 @font-face {
-  font-family: 'Press Start 2P';
+  font-family: 'PressStart2P';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
